@@ -12,24 +12,25 @@ body {
 
 .timer-container {
     text-align: center;
-    padding: 10px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
 }
 
 #timer {
-    font-size: 5em;
+    font-size: 9em;
     margin-bottom: 20px;
 }
 
 button {
     margin: 10px;
     padding: 15px 30px;
-    font-size: 2em;
+    font-size: 7em;
     border: none;
     border-radius: 5px;
     color: #fff;
     background-color: #007BFF;
     width: 100%;
-    max-width: 300px;
 }
 
 button:active {
@@ -37,17 +38,7 @@ button:active {
 }
 
 
-body > div {
-    transform: scale(2);
-}
 
 
 
-
-@media (min-width: 1024px) {
-    body > div {
-        transform: scale(1);
-    }
-
-}
 

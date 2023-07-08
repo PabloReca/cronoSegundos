@@ -8,6 +8,11 @@ const stopButton = document.getElementById('stop');
 const resetButton = document.getElementById('reset');
 
 function startTimer() {
+    // Comprueba si ya hay un intervalo en ejecución
+    if(intervalId) {
+        return; // Si hay un intervalo en ejecución, simplemente regresa y no hagas nada más
+    }
+
     intervalId = setInterval(() => {
         seconds += 0.01;
         timerDisplay.textContent = ` ${seconds.toFixed(3)}`;

@@ -5,11 +5,12 @@ let intervalId = null;
 const timerDisplay = document.getElementById('timer');
 const startButton = document.getElementById('start');
 const stopButton = document.getElementById('stop');
+const resetButton = document.getElementById('reset');
 
 function startTimer() {
     intervalId = setInterval(() => {
         seconds += 0.01;
-        timerDisplay.textContent = `Segundos transcurridos: ${seconds.toFixed(3)}`;
+        timerDisplay.textContent = ` ${seconds.toFixed(3)}`;
     }, 10);
 }
 
@@ -20,6 +21,13 @@ function stopTimer() {
     }
 }
 
-// Asignar funciones de inicio y detención a los botones
+function resetTimer() {
+    stopTimer();
+    seconds = 0;
+    timerDisplay.textContent = ` ${seconds.toFixed(3)}`;
+}
+
+// Asignar funciones de inicio, detención y reinicio a los botones
 startButton.addEventListener('click', startTimer);
 stopButton.addEventListener('click', stopTimer);
+resetButton.addEventListener('click', resetTimer);

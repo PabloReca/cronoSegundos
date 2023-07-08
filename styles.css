@@ -36,20 +36,18 @@ button:active {
     background-color: #0056b3;
 }
 
-/* Estilos para dispositivos con pantalla pequeña */
-@media screen and (max-width: 600px) {
-    #timer {
-        font-size: 6em;
-    }
 
-    button {
-        padding: 20px;
-        font-size: 2.5em;
-    }
-
-    .timer-container {
-        width: 200%;
-    }
+body > div {
+    transform: scale(2);
 }
 
+
+
+
+@media (min-width: 1024px) {
+    body > div {
+        transform: scale(1);
+    }
+
+}
 
